@@ -18,12 +18,12 @@ function userPicture(user) {
 
 server.post("/sign-up", (req, res) => {
     if (!req.body.avatar || !req.body.username) {
-        res.status(400)
+        res.status(400);
         res.send("Todos os campos são obrigatórios!");
         return;
     }
     users.push(req.body);
-    res.status(201)
+    res.status(201);
     res.send("OK");
 });
 
